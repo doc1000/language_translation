@@ -8,7 +8,7 @@ def vectorize_data(data_path):
     #read in the tab-delimited input + target
     with open(data_path, 'r', encoding='utf-8') as f:
         lines = f.read().split('\n')
-    for line in lines[1:1000]:
+    for line in lines[:10000]:
         input_text, target_text = line.split('\t')
         # We use "tab" as the "start sequence" character
         # for the targets, and "\n" as "end sequence" character.
@@ -56,4 +56,4 @@ def vectorize_data(data_path):
                 # and will not include the start character.
                 decoder_target_data[i, t - 1, target_token_index[char]] = 1.
 
-    return encoder_input_data, decoder_target_data, decoder_input_data,
+    return encoder_input_data, decoder_target_data, decoder_input_data
