@@ -6,102 +6,139 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.metrics.pairwise import linear_kernel
 
-emails = pd.read_csv('data/jan_mar_2018.csv')
+#emails = pd.read_csv('doster/fin-eng/fin.txt')
 #print(emails.shape) # (10000, 3)
+data_path = 'doster/fin-eng/fin.txt'
+input_texts=[]
+target_texts=[]
+input_characters = set()
+target_characters = set()
+with open(data_path, 'r', encoding='utf-8') as f:
+    lines = f.read().split('\n')
 
-mail_df = emails.copy()
-# mail_df.drop(emails.query(
-#     "Body == '' | To == '' | 'Sender Email' == ''"
-# ).index, inplace=True)
+line_count = len(lines)
+breaks = [[0,line_count//4],[line_count//4,line_count//2],[line_count//2,line_count//4*3],[line_count//4*3,-1]]
+fig, ax = plt.subplots(nrows=2,ncols=2, figsize=(12,12))
+ax=ax.flatten()
+for i_brk,brk in enumerate(breaks):
+    input_texts=[]
+    target_texts=[]
+    input_characters = set()
+    target_characters = set()
 
-mail_df = mail_df[mail_df['Body'].isnull()==False]
+    for line in lines[brk[0]:brk[1]]:
+        input_text, target_text = line.split('\t')
+        # We use "tab" as the "start sequence" character
+        # for the targets, and "\n" as "end sequence" character.
+        target_text = '\t' + target_text + '\n'
+        input_texts.append(input_text)
+        target_texts.append(target_text)
+
+    input_texts=np.array(input_texts)
+    target_texts=np.array(target_texts)
+
+    input2 = np.column_stack((input_texts.reshape(-1,1),target_texts.reshape(-1,1)))
+    df = pd.DataFrame(input2,columns=['Body','target'])
 
 
-'''
-no stop words
-vect = TfidfVectorizer(stop_words='english', max_df=0.50, min_df=2)
-X = vect.fit_transform(mail_df.Body)
-'''
-stopwords = ENGLISH_STOP_WORDS.union(['ect', 'hou', 'com', 'recipient'])
-vect = TfidfVectorizer(analyzer='word', stop_words=stopwords, max_df=0.3, min_df=2)
-X = vect.fit_transform(mail_df.Body)
+    mail_df = df.copy()
+    # mail_df.drop(emails.query(
+    #     "Body == '' | To == '' | 'Sender Email' == ''"
+    # ).index, inplace=True)
+
+    mail_df = mail_df[mail_df['Body'].isnull()==False]
 
 
-def pca_scatter():
+    '''
+    no stop words
+    vect = TfidfVectorizer(stop_words='english', max_df=0.50, min_df=2)
+    X = vect.fit_transform(mail_df.Body)
+    '''
+    stopwords = ENGLISH_STOP_WORDS.union(['ect', 'hou', 'com', 'recipient','tom','mary','don'])
+    vect = TfidfVectorizer(analyzer='word', stop_words=stopwords, max_df=0.3, min_df=2)
+    X = vect.fit_transform(mail_df.Body)
+
+
+    def pca_scatter():
+        X_dense = X.todense()
+        coords = PCA(n_components=2).fit_transform(X_dense)
+
+        plt.scatter(coords[:, 0], coords[:, 1], c='m')
+        plt.show()
+
+
+    def top_tfidf_feats(row, features, top_n=20):
+        topn_ids = np.argsort(row)[::-1][:top_n]
+        top_feats = [(features[i], row[i]) for i in topn_ids]
+        df = pd.DataFrame(top_feats, columns=['features', 'score'])
+        return df
+
+    def top_feats_in_doc(X, features, row_id, top_n=25):
+        row = np.squeeze(X[row_id].toarray())
+        return top_tfidf_feats(row, features, top_n)
+
+    features = vect.get_feature_names()
+    #print(top_feats_in_doc(X, features, 1, 10))
+
+    def top_mean_feats(X, features,
+     grp_ids=None, min_tfidf=0.1, top_n=25):
+        if grp_ids:
+            D = X[grp_ids].toarray()
+        else:
+            D = X.toarray()
+
+        D[D < min_tfidf] = 0
+        tfidf_means = np.mean(D, axis=0)
+        return top_tfidf_feats(tfidf_means, features, top_n)
+
+    print(top_mean_feats(X, features, top_n=10))
+
+    n_clusters = 5
+    clf = KMeans(n_clusters=n_clusters, max_iter=100, init='k-means++', n_init=1)
+    labels = clf.fit_predict(X)
+
+    def pca_scatter_kmeans(ax):
+        X_dense = X.todense()
+        coords = PCA(n_components=2).fit_transform(X_dense)
+
+        ax.scatter(coords[:, 0], coords[:, 1], c=labels)
+        #plt.show()
+    pca_scatter_kmeans(ax[i_brk])
+
+    def top_feats_per_cluster(X, y, features, min_tfidf=0.1, top_n=25):
+        dfs = []
+
+        labels = np.unique(y)
+        for label in labels:
+            ids = np.where(y==label)
+            feats_df = top_mean_feats(X, features, ids,    min_tfidf=min_tfidf, top_n=top_n)
+            feats_df.label = label
+            dfs.append(feats_df)
+        return dfs
+
+    # Let's plot this with matplotlib to visualize it.
+    # First we need to make 2D coordinates from the sparse matrix.
     X_dense = X.todense()
-    coords = PCA(n_components=2).fit_transform(X_dense)
+    pca = PCA(n_components=2).fit(X_dense)
+    coords = pca.transform(X_dense)
 
-    plt.scatter(coords[:, 0], coords[:, 1], c='m')
-    plt.show()
+    # Lets plot it again, but this time we add some color to it.
+    # This array needs to be at least the length of the n_clusters.
+    label_colors = ["#2AB0E9", "#2BAF74", "#D7665E", "#CCCCCC",
+                    "#D2CA0D", "#522A64", "#A3DB05", "#FC6514"]
+    colors = [label_colors[i] for i in labels]
 
-
-def top_tfidf_feats(row, features, top_n=20):
-    topn_ids = np.argsort(row)[::-1][:top_n]
-    top_feats = [(features[i], row[i]) for i in topn_ids]
-    df = pd.DataFrame(top_feats, columns=['features', 'score'])
-    return df
-
-def top_feats_in_doc(X, features, row_id, top_n=25):
-    row = np.squeeze(X[row_id].toarray())
-    return top_tfidf_feats(row, features, top_n)
-
-features = vect.get_feature_names()
-#print(top_feats_in_doc(X, features, 1, 10))
-
-def top_mean_feats(X, features,
- grp_ids=None, min_tfidf=0.1, top_n=25):
-    if grp_ids:
-        D = X[grp_ids].toarray()
-    else:
-        D = X.toarray()
-
-    D[D < min_tfidf] = 0
-    tfidf_means = np.mean(D, axis=0)
-    return top_tfidf_feats(tfidf_means, features, top_n)
-
-#print(top_mean_feats(X, features, top_n=10))
-
-n_clusters = 5
-clf = KMeans(n_clusters=n_clusters, max_iter=100, init='k-means++', n_init=1)
-labels = clf.fit_predict(X)
-
-def pca_scatter_kmeans():
-    X_dense = X.todense()
-    coords = PCA(n_components=2).fit_transform(X_dense)
-
-    plt.scatter(coords[:, 0], coords[:, 1], c=labels)
-    plt.show()
-#pca_scatter_kmeans()
-
-def top_feats_per_cluster(X, y, features, min_tfidf=0.1, top_n=25):
-    dfs = []
-
-    labels = np.unique(y)
-    for label in labels:
-        ids = np.where(y==label)
-        feats_df = top_mean_feats(X, features, ids,    min_tfidf=min_tfidf, top_n=top_n)
-        feats_df.label = label
-        dfs.append(feats_df)
-    return dfs
-
-# Let's plot this with matplotlib to visualize it.
-# First we need to make 2D coordinates from the sparse matrix.
-X_dense = X.todense()
-pca = PCA(n_components=2).fit(X_dense)
-coords = pca.transform(X_dense)
-
-# Lets plot it again, but this time we add some color to it.
-# This array needs to be at least the length of the n_clusters.
-label_colors = ["#2AB0E9", "#2BAF74", "#D7665E", "#CCCCCC",
-                "#D2CA0D", "#522A64", "#A3DB05", "#FC6514"]
-colors = [label_colors[i] for i in labels]
-
-#plt.scatter(coords[:, 0], coords[:, 1], c=colors)
-# Plot the cluster centers
-centroids = clf.cluster_centers_
-centroid_coords = pca.transform(centroids)
-#plt.scatter(centroid_coords[:, 0], centroid_coords[:, 1], marker='X', s=200, linewidths=2, c='#444d60')
-#plt.show()
+    #plt.scatter(coords[:, 0], coords[:, 1], c=colors)
+    # Plot the cluster centers
+    centroids = clf.cluster_centers_
+    centroid_coords = pca.transform(centroids)
+    ax[i_brk].scatter(centroid_coords[:, 0], centroid_coords[:, 1], marker='X', s=200, linewidths=2, c='#444d60')
+    qtile = i_brk+1
+    ax[i_brk].set_title('Quartile {}\nTraining Statements'.format(qtile))
+#fig.subtitle()
+#fig.tight_layout()
+plt.suptitle('Training Word Complexity\n2 Eigen PCA Kmeans Clustering of words')
+plt.show()
 
 def plot_tfidf_classfeats_h(dfs):
     fig = plt.figure(figsize=(12, 9), facecolor="w")
@@ -124,4 +161,4 @@ def plot_tfidf_classfeats_h(dfs):
         plt.show()
 
 
-plot_tfidf_classfeats_h(top_feats_per_cluster(X, labels, features, 0.1, 25))
+#plot_tfidf_classfeats_h(top_feats_per_cluster(X, labels, features, 0.1, 25))
