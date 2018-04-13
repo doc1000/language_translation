@@ -6,10 +6,31 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.metrics.pairwise import linear_kernel
 
-emails = pd.read_csv('data/jan_mar_2018.csv')
+#emails = pd.read_csv('doster/fin-eng/fin.txt')
 #print(emails.shape) # (10000, 3)
+data_path = 'doster/fin-eng/fin.txt'
+input_texts=[]
+target_texts=[]
+input_characters = set()
+target_characters = set()
+with open(data_path, 'r', encoding='utf-8') as f:
+    lines = f.read().split('\n')
+for line in lines[32000:-1]:
+    input_text, target_text = line.split('\t')
+    # We use "tab" as the "start sequence" character
+    # for the targets, and "\n" as "end sequence" character.
+    target_text = '\t' + target_text + '\n'
+    input_texts.append(input_text)
+    target_texts.append(target_text)
 
-mail_df = emails.copy()
+input_texts=np.array(input_texts)
+target_texts=np.array(target_texts)
+
+input2 = np.column_stack((input_texts.reshape(-1,1),target_texts.reshape(-1,1)))
+df = pd.DataFrame(input2,columns=['Body','target'])
+
+
+mail_df = df.copy()
 # mail_df.drop(emails.query(
 #     "Body == '' | To == '' | 'Sender Email' == ''"
 # ).index, inplace=True)
@@ -22,7 +43,7 @@ no stop words
 vect = TfidfVectorizer(stop_words='english', max_df=0.50, min_df=2)
 X = vect.fit_transform(mail_df.Body)
 '''
-stopwords = ENGLISH_STOP_WORDS.union(['ect', 'hou', 'com', 'recipient'])
+stopwords = ENGLISH_STOP_WORDS.union(['ect', 'hou', 'com', 'recipient','tom','mary','don'])
 vect = TfidfVectorizer(analyzer='word', stop_words=stopwords, max_df=0.3, min_df=2)
 X = vect.fit_transform(mail_df.Body)
 
@@ -59,7 +80,7 @@ def top_mean_feats(X, features,
     tfidf_means = np.mean(D, axis=0)
     return top_tfidf_feats(tfidf_means, features, top_n)
 
-#print(top_mean_feats(X, features, top_n=10))
+print(top_mean_feats(X, features, top_n=10))
 
 n_clusters = 5
 clf = KMeans(n_clusters=n_clusters, max_iter=100, init='k-means++', n_init=1)
@@ -71,7 +92,7 @@ def pca_scatter_kmeans():
 
     plt.scatter(coords[:, 0], coords[:, 1], c=labels)
     plt.show()
-#pca_scatter_kmeans()
+pca_scatter_kmeans()
 
 def top_feats_per_cluster(X, y, features, min_tfidf=0.1, top_n=25):
     dfs = []
@@ -100,8 +121,8 @@ colors = [label_colors[i] for i in labels]
 # Plot the cluster centers
 centroids = clf.cluster_centers_
 centroid_coords = pca.transform(centroids)
-#plt.scatter(centroid_coords[:, 0], centroid_coords[:, 1], marker='X', s=200, linewidths=2, c='#444d60')
-#plt.show()
+plt.scatter(centroid_coords[:, 0], centroid_coords[:, 1], marker='X', s=200, linewidths=2, c='#444d60')
+plt.show()
 
 def plot_tfidf_classfeats_h(dfs):
     fig = plt.figure(figsize=(12, 9), facecolor="w")
