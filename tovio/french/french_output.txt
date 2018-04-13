@@ -1,0 +1,509 @@
+In [2]: pwd
+Out[2]: '/home/g49/Desktop/student_work/language_translation/tovio/french'
+
+In [3]: run lstm_seq2seq.py
+Number of samples: 10000
+Number of unique input tokens: 71
+Number of unique output tokens: 94
+Max sequence length for inputs: 16
+Max sequence length for outputs: 59
+Train on 8000 samples, validate on 2000 samples
+Epoch 1/50
+8000/8000 [==============================] - 102s - loss: 0.9171 - val_loss: 0.9557
+Epoch 2/50
+8000/8000 [==============================] - 95s - loss: 0.7275 - val_loss: 0.7983
+Epoch 3/50
+8000/8000 [==============================] - 95s - loss: 0.6202 - val_loss: 0.7069
+Epoch 4/50
+8000/8000 [==============================] - 95s - loss: 0.5673 - val_loss: 0.6579
+Epoch 5/50
+8000/8000 [==============================] - 98s - loss: 0.5266 - val_loss: 0.6156
+Epoch 6/50
+8000/8000 [==============================] - 99s - loss: 0.4952 - val_loss: 0.5968
+Epoch 7/50
+8000/8000 [==============================] - 95s - loss: 0.4695 - val_loss: 0.5707
+Epoch 8/50
+8000/8000 [==============================] - 95s - loss: 0.4469 - val_loss: 0.5551
+Epoch 9/50
+8000/8000 [==============================] - 95s - loss: 0.4273 - val_loss: 0.5395
+Epoch 10/50
+8000/8000 [==============================] - 95s - loss: 0.4098 - val_loss: 0.5269
+Epoch 11/50
+8000/8000 [==============================] - 95s - loss: 0.3942 - val_loss: 0.5159
+Epoch 12/50
+8000/8000 [==============================] - 95s - loss: 0.3797 - val_loss: 0.5053
+Epoch 13/50
+8000/8000 [==============================] - 95s - loss: 0.3667 - val_loss: 0.4993
+Epoch 14/50
+8000/8000 [==============================] - 95s - loss: 0.3540 - val_loss: 0.4932
+Epoch 15/50
+8000/8000 [==============================] - 95s - loss: 0.3418 - val_loss: 0.4868
+Epoch 16/50
+8000/8000 [==============================] - 95s - loss: 0.3311 - val_loss: 0.4838
+Epoch 17/50
+8000/8000 [==============================] - 95s - loss: 0.3202 - val_loss: 0.4770
+Epoch 18/50
+8000/8000 [==============================] - 95s - loss: 0.3101 - val_loss: 0.4770
+Epoch 19/50
+8000/8000 [==============================] - 95s - loss: 0.3010 - val_loss: 0.4707
+Epoch 20/50
+8000/8000 [==============================] - 95s - loss: 0.2916 - val_loss: 0.4727
+Epoch 21/50
+8000/8000 [==============================] - 95s - loss: 0.2829 - val_loss: 0.4755
+Epoch 22/50
+8000/8000 [==============================] - 95s - loss: 0.2747 - val_loss: 0.4696
+Epoch 23/50
+8000/8000 [==============================] - 95s - loss: 0.2666 - val_loss: 0.4751
+Epoch 24/50
+8000/8000 [==============================] - 95s - loss: 0.2586 - val_loss: 0.4723
+Epoch 25/50
+8000/8000 [==============================] - 95s - loss: 0.2520 - val_loss: 0.4737
+Epoch 26/50
+8000/8000 [==============================] - 95s - loss: 0.2452 - val_loss: 0.4774
+Epoch 27/50
+8000/8000 [==============================] - 95s - loss: 0.2382 - val_loss: 0.4774
+Epoch 28/50
+8000/8000 [==============================] - 95s - loss: 0.2315 - val_loss: 0.4765
+Epoch 29/50
+8000/8000 [==============================] - 97s - loss: 0.2254 - val_loss: 0.4809
+Epoch 30/50
+8000/8000 [==============================] - 95s - loss: 0.2192 - val_loss: 0.4856
+Epoch 31/50
+8000/8000 [==============================] - 95s - loss: 0.2136 - val_loss: 0.4876
+Epoch 32/50
+8000/8000 [==============================] - 99s - loss: 0.2076 - val_loss: 0.4917
+Epoch 33/50
+8000/8000 [==============================] - 95s - loss: 0.2022 - val_loss: 0.4902
+Epoch 34/50
+8000/8000 [==============================] - 96s - loss: 0.1969 - val_loss: 0.4994
+Epoch 35/50
+8000/8000 [==============================] - 95s - loss: 0.1921 - val_loss: 0.4979
+Epoch 36/50
+8000/8000 [==============================] - 95s - loss: 0.1873 - val_loss: 0.5063
+Epoch 37/50
+8000/8000 [==============================] - 95s - loss: 0.1828 - val_loss: 0.5050
+Epoch 38/50
+8000/8000 [==============================] - 97s - loss: 0.1780 - val_loss: 0.5129
+Epoch 39/50
+8000/8000 [==============================] - 95s - loss: 0.1739 - val_loss: 0.5172
+Epoch 40/50
+8000/8000 [==============================] - 95s - loss: 0.1696 - val_loss: 0.5229
+Epoch 41/50
+8000/8000 [==============================] - 98s - loss: 0.1654 - val_loss: 0.5281
+Epoch 42/50
+8000/8000 [==============================] - 96s - loss: 0.1617 - val_loss: 0.5298
+Epoch 43/50
+8000/8000 [==============================] - 95s - loss: 0.1579 - val_loss: 0.5317
+Epoch 44/50
+8000/8000 [==============================] - 96s - loss: 0.1543 - val_loss: 0.5347
+Epoch 45/50
+8000/8000 [==============================] - 95s - loss: 0.1511 - val_loss: 0.5449
+Epoch 46/50
+8000/8000 [==============================] - 95s - loss: 0.1473 - val_loss: 0.5455
+Epoch 47/50
+8000/8000 [==============================] - 95s - loss: 0.1445 - val_loss: 0.5537
+Epoch 48/50
+8000/8000 [==============================] - 98s - loss: 0.1409 - val_loss: 0.5531
+Epoch 49/50
+8000/8000 [==============================] - 95s - loss: 0.1380 - val_loss: 0.5601
+Epoch 50/50
+8000/8000 [==============================] - 95s - loss: 0.1349 - val_loss: 0.5688
+-
+Input sentence: Go.
+Decoded sentence: Va !
+
+-
+Input sentence: Run!
+Decoded sentence: Salut les milles !
+
+-
+Input sentence: Run!
+Decoded sentence: Salut les milles !
+
+-
+Input sentence: Wow!
+Decoded sentence: Ça alors laister nons mes ass.
+
+-
+Input sentence: Fire!
+Decoded sentence: Cours !
+
+-
+Input sentence: Help!
+Decoded sentence: Sais-toi !
+
+-
+Input sentence: Jump.
+Decoded sentence: Dégage !
+
+-
+Input sentence: Stop!
+Decoded sentence: Arrêtez-vous !
+
+-
+Input sentence: Stop!
+Decoded sentence: Arrêtez-vous !
+
+-
+Input sentence: Stop!
+Decoded sentence: Arrêtez-vous !
+
+-
+Input sentence: Wait!
+Decoded sentence: Attends !
+
+-
+Input sentence: Wait!
+Decoded sentence: Attends !
+
+-
+Input sentence: Go on.
+Decoded sentence: Vas-y maintenant.
+
+-
+Input sentence: Go on.
+Decoded sentence: Vas-y maintenant.
+
+-
+Input sentence: Go on.
+Decoded sentence: Vas-y maintenant.
+
+-
+Input sentence: I see.
+Decoded sentence: Je l'ai vu.
+
+-
+Input sentence: I try.
+Decoded sentence: J'ai essayé.
+
+-
+Input sentence: I won!
+Decoded sentence: Je me suis amusé.
+
+-
+Input sentence: I won!
+Decoded sentence: Je me suis amusé.
+
+-
+Input sentence: Oh no!
+Decoded sentence: Qu'est-ce qu'il y ast ?
+
+-
+Input sentence: Attack!
+Decoded sentence: Attaque !
+
+-
+Input sentence: Attack!
+Decoded sentence: Attaque !
+
+-
+Input sentence: Cheers!
+Decoded sentence: Merci !
+
+-
+Input sentence: Cheers!
+Decoded sentence: Merci !
+
+-
+Input sentence: Cheers!
+Decoded sentence: Merci !
+
+-
+Input sentence: Cheers!
+Decoded sentence: Merci !
+
+-
+Input sentence: Get up.
+Decoded sentence: Sois sait aiten !
+
+-
+Input sentence: Go now.
+Decoded sentence: Vas-y maintenant.
+
+-
+Input sentence: Go now.
+Decoded sentence: Vas-y maintenant.
+
+-
+Input sentence: Go now.
+Decoded sentence: Vas-y maintenant.
+
+-
+Input sentence: Got it!
+Decoded sentence: Sors !
+
+-
+Input sentence: Got it!
+Decoded sentence: Sors !
+
+-
+Input sentence: Got it?
+Decoded sentence: Vichante ?
+
+-
+Input sentence: Got it?
+Decoded sentence: Vichante ?
+
+-
+Input sentence: Got it?
+Decoded sentence: Vichante ?
+
+-
+Input sentence: Hop in.
+Decoded sentence: Comme c'est aurrant !
+
+-
+Input sentence: Hop in.
+Decoded sentence: Comme c'est aurrant !
+
+-
+Input sentence: Hug me.
+Decoded sentence: Serre-moi dans tes bras !
+
+-
+Input sentence: Hug me.
+Decoded sentence: Serre-moi dans tes bras !
+
+-
+Input sentence: I fell.
+Decoded sentence: Je me sens bien.
+
+-
+Input sentence: I fell.
+Decoded sentence: Je me sens bien.
+
+-
+Input sentence: I know.
+Decoded sentence: Je les ai laissés y aller.
+
+-
+Input sentence: I left.
+Decoded sentence: Je les ai laissés y aller.
+
+-
+Input sentence: I left.
+Decoded sentence: Je les ai laissés y aller.
+
+-
+Input sentence: I lost.
+Decoded sentence: Je l'aime bien.
+
+-
+Input sentence: I'm 19.
+Decoded sentence: Je suis crédule.
+
+-
+Input sentence: I'm OK.
+Decoded sentence: Je suis contin.
+
+-
+Input sentence: I'm OK.
+Decoded sentence: Je suis contin.
+
+-
+Input sentence: Listen.
+Decoded sentence: Reste alitée !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est excruté !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est excruté !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est excruté !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est excruté !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est excruté !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est excruté !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est excruté !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est excruté !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est excruté !
+
+-
+Input sentence: Really?
+Decoded sentence: Vrai ?
+
+-
+Input sentence: Really?
+Decoded sentence: Vrai ?
+
+-
+Input sentence: Really?
+Decoded sentence: Vrai ?
+
+-
+Input sentence: Thanks.
+Decoded sentence: Merci !
+
+-
+Input sentence: We try.
+Decoded sentence: Nous avons attendu.
+
+-
+Input sentence: We won.
+Decoded sentence: Nous l'avons vu.
+
+-
+Input sentence: We won.
+Decoded sentence: Nous l'avons vu.
+
+-
+Input sentence: We won.
+Decoded sentence: Nous l'avons vu.
+
+-
+Input sentence: We won.
+Decoded sentence: Nous l'avons vu.
+
+-
+Input sentence: Ask Tom.
+Decoded sentence: Demande à Tom.
+
+-
+Input sentence: Awesome!
+Decoded sentence: Fantastique !
+
+-
+Input sentence: Be calm.
+Decoded sentence: Soyez calme !
+
+-
+Input sentence: Be calm.
+Decoded sentence: Soyez calme !
+
+-
+Input sentence: Be calm.
+Decoded sentence: Soyez calme !
+
+-
+Input sentence: Be cool.
+Decoded sentence: Soyez confiantes !
+
+-
+Input sentence: Be fair.
+Decoded sentence: Soyez équitable !
+
+-
+Input sentence: Be fair.
+Decoded sentence: Soyez équitable !
+
+-
+Input sentence: Be fair.
+Decoded sentence: Soyez équitable !
+
+-
+Input sentence: Be fair.
+Decoded sentence: Soyez équitable !
+
+-
+Input sentence: Be fair.
+Decoded sentence: Soyez équitable !
+
+-
+Input sentence: Be fair.
+Decoded sentence: Soyez équitable !
+
+-
+Input sentence: Be kind.
+Decoded sentence: Sois gentil.
+
+-
+Input sentence: Be nice.
+Decoded sentence: Soyez gentille !
+
+-
+Input sentence: Be nice.
+Decoded sentence: Soyez gentille !
+
+-
+Input sentence: Be nice.
+Decoded sentence: Soyez gentille !
+
+-
+Input sentence: Be nice.
+Decoded sentence: Soyez gentille !
+
+-
+Input sentence: Be nice.
+Decoded sentence: Soyez gentille !
+
+-
+Input sentence: Be nice.
+Decoded sentence: Soyez gentille !
+
+-
+Input sentence: Beat it.
+Decoded sentence: Dégage !
+
+-
+Input sentence: Call me.
+Decoded sentence: Appellez-moi !
+
+-
+Input sentence: Call me.
+Decoded sentence: Appellez-moi !
+
+-
+Input sentence: Call us.
+Decoded sentence: Appelez Tom.
+
+-
+Input sentence: Call us.
+Decoded sentence: Appelez Tom.
+
+-
+Input sentence: Come in.
+Decoded sentence: Entrez !
+
+-
+Input sentence: Come in.
+Decoded sentence: Entrez !
+
+-
+Input sentence: Come in.
+Decoded sentence: Entrez !
+
+-
+Input sentence: Come in.
+Decoded sentence: Entrez !
+
+-
+Input sentence: Come on!
+Decoded sentence: Allez !
+
+-
+Input sentence: Come on.
+Decoded sentence: Viens !
+
+-
+Input sentence: Come on.
+Decoded sentence: Viens !
+
+-
+Input sentence: Come on.
+Decoded sentence: Viens !
+
+-
+Input sentence: Drop it!
+Decoded sentence: Laisse tomber !
