@@ -1,0 +1,112 @@
+Using TensorFlow backend.
+Number of samples: 10000
+Number of unique input tokens: 71
+Number of unique output tokens: 86
+Max sequence length for inputs: 17
+Max sequence length for outputs: 42
+Train on 8000 samples, validate on 2000 samples
+Epoch 1/50
+2018-04-13 11:06:52.478356: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-04-13 11:06:52.504092: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-04-13 11:06:52.504122: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2018-04-13 11:06:52.504131: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-04-13 11:06:52.504141: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+8000/8000 [==============================] - 87s - loss: 1.1313 - val_loss: 1.2270
+Epoch 2/50
+8000/8000 [==============================] - 81s - loss: 0.9320 - val_loss: 1.0283
+Epoch 3/50
+8000/8000 [==============================] - 76s - loss: 0.8129 - val_loss: 0.9626
+Epoch 4/50
+8000/8000 [==============================] - 76s - loss: 0.7543 - val_loss: 0.8784
+Epoch 5/50
+8000/8000 [==============================] - 77s - loss: 0.7103 - val_loss: 0.8275
+Epoch 6/50
+8000/8000 [==============================] - 79s - loss: 0.6733 - val_loss: 0.8022
+Epoch 7/50
+8000/8000 [==============================] - 78s - loss: 0.6380 - val_loss: 0.7698
+Epoch 8/50
+8000/8000 [==============================] - 78s - loss: 0.6081 - val_loss: 0.7516
+Epoch 9/50
+8000/8000 [==============================] - 78s - loss: 0.5817 - val_loss: 0.7252
+Epoch 10/50
+8000/8000 [==============================] - 78s - loss: 0.5568 - val_loss: 0.7114
+Epoch 11/50
+8000/8000 [==============================] - 81s - loss: 0.5344 - val_loss: 0.6903
+Epoch 12/50
+8000/8000 [==============================] - 77s - loss: 0.5146 - val_loss: 0.6729
+Epoch 13/50
+8000/8000 [==============================] - 76s - loss: 0.4959 - val_loss: 0.6586
+Epoch 14/50
+8000/8000 [==============================] - 78s - loss: 0.4780 - val_loss: 0.6566
+Epoch 15/50
+8000/8000 [==============================] - 77s - loss: 0.4618 - val_loss: 0.6522
+Epoch 16/50
+8000/8000 [==============================] - 77s - loss: 0.4464 - val_loss: 0.6429
+Epoch 17/50
+8000/8000 [==============================] - 76s - loss: 0.4316 - val_loss: 0.6396
+Epoch 18/50
+8000/8000 [==============================] - 77s - loss: 0.4180 - val_loss: 0.6378
+Epoch 19/50
+8000/8000 [==============================] - 80s - loss: 0.4043 - val_loss: 0.6349
+Epoch 20/50
+8000/8000 [==============================] - 76s - loss: 0.3913 - val_loss: 0.6333
+Epoch 21/50
+8000/8000 [==============================] - 76s - loss: 0.3791 - val_loss: 0.6367
+Epoch 22/50
+8000/8000 [==============================] - 77s - loss: 0.3675 - val_loss: 0.6317
+Epoch 23/50
+8000/8000 [==============================] - 77s - loss: 0.3563 - val_loss: 0.6297
+Epoch 24/50
+8000/8000 [==============================] - 77s - loss: 0.3447 - val_loss: 0.6286
+Epoch 25/50
+8000/8000 [==============================] - 81s - loss: 0.3345 - val_loss: 0.6348
+Epoch 26/50
+8000/8000 [==============================] - 76s - loss: 0.3247 - val_loss: 0.6412
+Epoch 27/50
+8000/8000 [==============================] - 76s - loss: 0.3147 - val_loss: 0.6381
+Epoch 28/50
+8000/8000 [==============================] - 77s - loss: 0.3049 - val_loss: 0.6420
+Epoch 29/50
+8000/8000 [==============================] - 76s - loss: 0.2961 - val_loss: 0.6440
+Epoch 30/50
+8000/8000 [==============================] - 79s - loss: 0.2864 - val_loss: 0.6491
+Epoch 31/50
+8000/8000 [==============================] - 77s - loss: 0.2782 - val_loss: 0.6634
+Epoch 32/50
+8000/8000 [==============================] - 77s - loss: 0.2699 - val_loss: 0.6571
+Epoch 33/50
+8000/8000 [==============================] - 77s - loss: 0.2615 - val_loss: 0.6629
+Epoch 34/50
+8000/8000 [==============================] - 80s - loss: 0.2538 - val_loss: 0.6696
+Epoch 35/50
+8000/8000 [==============================] - 77s - loss: 0.2461 - val_loss: 0.6754
+Epoch 36/50
+8000/8000 [==============================] - 78s - loss: 0.2390 - val_loss: 0.6806
+Epoch 37/50
+8000/8000 [==============================] - 76s - loss: 0.2319 - val_loss: 0.6871
+Epoch 38/50
+8000/8000 [==============================] - 77s - loss: 0.2251 - val_loss: 0.6928
+Epoch 39/50
+8000/8000 [==============================] - 80s - loss: 0.2185 - val_loss: 0.7040
+Epoch 40/50
+8000/8000 [==============================] - 78s - loss: 0.2120 - val_loss: 0.7138
+Epoch 41/50
+8000/8000 [==============================] - 78s - loss: 0.2061 - val_loss: 0.7137
+Epoch 42/50
+8000/8000 [==============================] - 77s - loss: 0.2001 - val_loss: 0.7267
+Epoch 43/50
+8000/8000 [==============================] - 77s - loss: 0.1944 - val_loss: 0.7369
+Epoch 44/50
+8000/8000 [==============================] - 78s - loss: 0.1887 - val_loss: 0.7491
+Epoch 45/50
+8000/8000 [==============================] - 78s - loss: 0.1836 - val_loss: 0.7509
+Epoch 46/50
+8000/8000 [==============================] - 79s - loss: 0.1788 - val_loss: 0.7570
+Epoch 47/50
+8000/8000 [==============================] - 77s - loss: 0.1735 - val_loss: 0.7694
+Epoch 48/50
+8000/8000 [==============================] - 76s - loss: 0.1689 - val_loss: 0.7734
+Epoch 49/50
+8000/8000 [==============================] - 77s - loss: 0.1644 - val_loss: 0.7807
+Epoch 50/50
+8000/8000 [==============================] - 77s - loss: 0.1600 - val_loss: 0.7853
