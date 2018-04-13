@@ -51,7 +51,7 @@ import os
 import numpy as np
 
 batch_size = 64  # Batch size for training.
-epochs = 50  # Number of epochs to train for.
+epochs = 10  # Number of epochs to train for.
 latent_dim = 256  # Latent dimensionality of the encoding space.
 num_samples = 10000  # Number of samples to train on.
 # Path to the data txt file on disk.
@@ -64,7 +64,7 @@ input_characters = set()
 target_characters = set()
 with open(data_path, 'r', encoding='utf-8') as f:
     lines = f.read().split('\n')
-for line in lines[-1*min(num_samples, len(lines) - 1):-1]:
+for line in lines[-1*min(num_samples+1, len(lines) - 1):-1]:
     input_text, target_text = line.split('\t')
     # We use "tab" as the "start sequence" character
     # for the targets, and "\n" as "end sequence" character.
