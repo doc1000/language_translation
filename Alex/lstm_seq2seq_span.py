@@ -51,7 +51,7 @@ import os
 import numpy as np
 
 batch_size = 64  # Batch size for training.
-epochs = 100  # Number of epochs to train for.
+epochs = 50  # Number of epochs to train for.
 latent_dim = 256  # Latent dimensionality of the encoding space.
 num_samples = 10000  # Number of samples to train on.
 # Path to the data txt file on disk.
@@ -64,7 +64,7 @@ input_characters = set()
 target_characters = set()
 with open(data_path, 'r', encoding='utf-8') as f:
     lines = f.read().split('\n')
-for line in lines[min(num_samples, len(lines) - 1) :]:
+for line in lines[: min(num_samples, len(lines) - 1)]:
     input_text, target_text = line.split('\t')
     # We use "tab" as the "start sequence" character
     # for the targets, and "\n" as "end sequence" character.
@@ -149,9 +149,10 @@ model.fit([encoder_input_data, decoder_input_data], decoder_target_data,
           epochs=epochs,
           verbose=1,
           validation_split=0.2)
+
 # , callbacks = [tensorboard]
 # Save model
-model.save('name_of_language.h5')
+model.save('spa.h5')
 
 # Next: inference mode (sampling).
 # Here's the drill:
