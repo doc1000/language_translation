@@ -44,6 +44,10 @@ from __future__ import print_function
 
 from keras.models import Model
 from keras.layers import Input, LSTM, Dense
+from keras.callbacks import TensorBoard
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL']='2' # disable Tensorflow warnings
+
 import numpy as np
 
 batch_size = 64  # Batch size for training.
@@ -135,14 +139,18 @@ decoder_outputs = decoder_dense(decoder_outputs)
 # `encoder_input_data` & `decoder_input_data` into `decoder_target_data`
 model = Model([encoder_inputs, decoder_inputs], decoder_outputs)
 
+# Create tensorboard log
+tensorboard = TensorBoard(log_dir='./logs', histogram_freq=2, batch_size=batch_size, write_graph=True, write_grads=True, write_images=True)
+
 # Run training
 model.compile(optimizer='rmsprop', loss='categorical_crossentropy')
 model.fit([encoder_input_data, decoder_input_data], decoder_target_data,
           batch_size=batch_size,
           epochs=epochs,
-          validation_split=0.2)
+          verbose=1,
+          validation_split=0.2, callbacks = [tensorboard])
 # Save model
-model.save('s2s.h5')
+model.save('name_of_language.h5')
 
 # Next: inference mode (sampling).
 # Here's the drill:
