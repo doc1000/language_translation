@@ -55,7 +55,7 @@ epochs = 100  # Number of epochs to train for.
 latent_dim = 256  # Latent dimensionality of the encoding space.
 num_samples = 10000  # Number of samples to train on.
 # Path to the data txt file on disk.
-data_path = 'fra-eng/fra.txt'
+data_path = 'spa-eng/spa.txt'
 
 # Vectorize the data.
 input_texts = []
@@ -64,7 +64,7 @@ input_characters = set()
 target_characters = set()
 with open(data_path, 'r', encoding='utf-8') as f:
     lines = f.read().split('\n')
-for line in lines[: min(num_samples, len(lines) - 1)]:
+for line in lines[-1*min(num_samples+1, len(lines) - 1):-1]:
     input_text, target_text = line.split('\t')
     # We use "tab" as the "start sequence" character
     # for the targets, and "\n" as "end sequence" character.
@@ -140,7 +140,7 @@ decoder_outputs = decoder_dense(decoder_outputs)
 model = Model([encoder_inputs, decoder_inputs], decoder_outputs)
 
 # Create tensorboard log
-tensorboard = TensorBoard(log_dir='./logs', histogram_freq=2, batch_size=batch_size, write_graph=True, write_grads=True, write_images=True)
+# tensorboard = TensorBoard(log_dir='./logs', histogram_freq=2, batch_size=batch_size, write_graph=True, write_grads=True, write_images=True)
 
 # Run training
 model.compile(optimizer='rmsprop', loss='categorical_crossentropy')
@@ -151,7 +151,7 @@ model.fit([encoder_input_data, decoder_input_data], decoder_target_data,
           validation_split=0.2)
 # , callbacks = [tensorboard]
 # Save model
-model.save('name_of_language.h5')
+model.save('spa_last_10000.h5')
 
 # Next: inference mode (sampling).
 # Here's the drill:
