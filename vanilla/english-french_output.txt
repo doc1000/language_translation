@@ -1,0 +1,600 @@
+8000/8000 [==============================] - 50s 6ms/step - loss: 0.9209 - val_loss: 0.9755
+Epoch 2/100
+8000/8000 [==============================] - 50s 6ms/step - loss: 0.7322 - val_loss: 0.7882
+Epoch 3/100
+8000/8000 [==============================] - 51s 6ms/step - loss: 0.6206 - val_loss: 0.7100
+Epoch 4/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.5638 - val_loss: 0.6646
+Epoch 5/100
+8000/8000 [==============================] - 52s 7ms/step - loss: 0.5245 - val_loss: 0.6326
+Epoch 6/100
+8000/8000 [==============================] - 52s 6ms/step - loss: 0.4927 - val_loss: 0.5934
+Epoch 7/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.4658 - val_loss: 0.5703
+Epoch 8/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.4427 - val_loss: 0.5532
+Epoch 9/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.4239 - val_loss: 0.5397
+Epoch 10/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.4056 - val_loss: 0.5235
+Epoch 11/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.3904 - val_loss: 0.5099
+Epoch 12/100
+8000/8000 [==============================] - 50s 6ms/step - loss: 0.3757 - val_loss: 0.5031
+Epoch 13/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.3616 - val_loss: 0.4973
+Epoch 14/100
+8000/8000 [==============================] - 51s 6ms/step - loss: 0.3488 - val_loss: 0.4974
+Epoch 15/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.3368 - val_loss: 0.4859
+Epoch 16/100
+8000/8000 [==============================] - 50s 6ms/step - loss: 0.3257 - val_loss: 0.4807
+Epoch 17/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.3149 - val_loss: 0.4760
+Epoch 18/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.3050 - val_loss: 0.4742
+Epoch 19/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.2950 - val_loss: 0.4699
+Epoch 20/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.2858 - val_loss: 0.4686
+Epoch 21/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.2768 - val_loss: 0.4771
+Epoch 22/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.2686 - val_loss: 0.4698
+Epoch 23/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.2599 - val_loss: 0.4681
+Epoch 24/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.2523 - val_loss: 0.4719
+Epoch 25/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.2449 - val_loss: 0.4743
+Epoch 26/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.2374 - val_loss: 0.4789
+Epoch 27/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.2303 - val_loss: 0.4824
+Epoch 28/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.2237 - val_loss: 0.4827
+Epoch 29/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.2173 - val_loss: 0.4865
+Epoch 30/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.2110 - val_loss: 0.4894
+Epoch 31/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.2052 - val_loss: 0.4848
+Epoch 32/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.1996 - val_loss: 0.4956
+Epoch 33/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.1939 - val_loss: 0.5001
+Epoch 34/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.1889 - val_loss: 0.5077
+Epoch 35/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.1839 - val_loss: 0.5066
+Epoch 36/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.1794 - val_loss: 0.5146
+Epoch 37/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.1745 - val_loss: 0.5182
+Epoch 38/100
+8000/8000 [==============================] - 51s 6ms/step - loss: 0.1702 - val_loss: 0.5207
+Epoch 39/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.1658 - val_loss: 0.5228
+Epoch 40/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.1617 - val_loss: 0.5298
+Epoch 41/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.1576 - val_loss: 0.5312
+Epoch 42/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.1540 - val_loss: 0.5368
+Epoch 43/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.1503 - val_loss: 0.5473
+Epoch 44/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.1468 - val_loss: 0.5445
+Epoch 45/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.1432 - val_loss: 0.5546
+Epoch 46/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.1404 - val_loss: 0.5557
+Epoch 47/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.1369 - val_loss: 0.5631
+Epoch 48/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.1341 - val_loss: 0.5733
+Epoch 49/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.1313 - val_loss: 0.5715
+Epoch 50/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.1283 - val_loss: 0.5771
+Epoch 51/100
+8000/8000 [==============================] - 53s 7ms/step - loss: 0.1259 - val_loss: 0.5835
+Epoch 52/100
+8000/8000 [==============================] - 53s 7ms/step - loss: 0.1232 - val_loss: 0.5891
+Epoch 53/100
+8000/8000 [==============================] - 50s 6ms/step - loss: 0.1208 - val_loss: 0.5906
+Epoch 54/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.1187 - val_loss: 0.5956
+Epoch 55/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.1159 - val_loss: 0.6111
+Epoch 56/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.1136 - val_loss: 0.6110
+Epoch 57/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.1115 - val_loss: 0.6114
+Epoch 58/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.1095 - val_loss: 0.6121
+Epoch 59/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.1074 - val_loss: 0.6179
+Epoch 60/100
+8000/8000 [==============================] - 52s 7ms/step - loss: 0.1058 - val_loss: 0.6227
+Epoch 61/100
+8000/8000 [==============================] - 50s 6ms/step - loss: 0.1038 - val_loss: 0.6307
+Epoch 62/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.1018 - val_loss: 0.6342
+Epoch 63/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.1001 - val_loss: 0.6330
+Epoch 64/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.0983 - val_loss: 0.6484
+Epoch 65/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0967 - val_loss: 0.6503
+Epoch 66/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0950 - val_loss: 0.6540
+Epoch 67/100
+8000/8000 [==============================] - 52s 7ms/step - loss: 0.0931 - val_loss: 0.6572
+Epoch 68/100
+8000/8000 [==============================] - 54s 7ms/step - loss: 0.0920 - val_loss: 0.6562
+Epoch 69/100
+8000/8000 [==============================] - 52s 7ms/step - loss: 0.0905 - val_loss: 0.6586
+Epoch 70/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0889 - val_loss: 0.6746
+Epoch 71/100
+8000/8000 [==============================] - 50s 6ms/step - loss: 0.0871 - val_loss: 0.6732
+Epoch 72/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0862 - val_loss: 0.6722
+Epoch 73/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0846 - val_loss: 0.6746
+Epoch 74/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0833 - val_loss: 0.6769
+Epoch 75/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0821 - val_loss: 0.6899
+Epoch 76/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.0810 - val_loss: 0.6946
+Epoch 77/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.0796 - val_loss: 0.6967
+Epoch 78/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0786 - val_loss: 0.6994
+Epoch 79/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.0772 - val_loss: 0.7030
+Epoch 80/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.0761 - val_loss: 0.7097
+Epoch 81/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.0751 - val_loss: 0.7104
+Epoch 82/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.0739 - val_loss: 0.7163
+Epoch 83/100
+8000/8000 [==============================] - 50s 6ms/step - loss: 0.0728 - val_loss: 0.7131
+Epoch 84/100
+8000/8000 [==============================] - 50s 6ms/step - loss: 0.0718 - val_loss: 0.7248
+Epoch 85/100
+8000/8000 [==============================] - 50s 6ms/step - loss: 0.0710 - val_loss: 0.7259
+Epoch 86/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0701 - val_loss: 0.7297
+Epoch 87/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0690 - val_loss: 0.7277
+Epoch 88/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0678 - val_loss: 0.7316
+Epoch 89/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0669 - val_loss: 0.7325
+Epoch 90/100
+8000/8000 [==============================] - 48s 6ms/step - loss: 0.0661 - val_loss: 0.7357
+Epoch 91/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0656 - val_loss: 0.7450
+Epoch 92/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0646 - val_loss: 0.7489
+Epoch 93/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0637 - val_loss: 0.7475
+Epoch 94/100
+8000/8000 [==============================] - 50s 6ms/step - loss: 0.0625 - val_loss: 0.7542
+Epoch 95/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0619 - val_loss: 0.7538
+Epoch 96/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0612 - val_loss: 0.7576
+Epoch 97/100
+8000/8000 [==============================] - 51s 6ms/step - loss: 0.0603 - val_loss: 0.7526
+Epoch 98/100
+8000/8000 [==============================] - 50s 6ms/step - loss: 0.0595 - val_loss: 0.7631
+Epoch 99/100
+8000/8000 [==============================] - 49s 6ms/step - loss: 0.0589 - val_loss: 0.7688
+Epoch 100/100
+8000/8000 [==============================] - 50s 6ms/step - loss: 0.0584 - val_loss: 0.7667
+/Users/tbot/anaconda3/lib/python3.6/site-packages/keras/engine/topology.py:2368: UserWarning: Layer lstm_2 was passed non-serializable keyword arguments: {'initial_state': [<tf.Tensor 'lstm_1/while/Exit_2:0' shape=(?, 256) dtype=float32>, <tf.Tensor 'lstm_1/while/Exit_3:0' shape=(?, 256) dtype=float32>]}. They will not be included in the serialized model (and thus will be missing at deserialization time).
+  str(node.arguments) + '. They will not be included '
+-
+Input sentence: Go.
+Decoded sentence: Va !
+
+-
+Input sentence: Run!
+Decoded sentence: Cours !
+
+-
+Input sentence: Run!
+Decoded sentence: Cours !
+
+-
+Input sentence: Wow!
+Decoded sentence: Ça alors !
+
+-
+Input sentence: Fire!
+Decoded sentence: Au feu !
+
+-
+Input sentence: Help!
+Decoded sentence: À l'aide !
+
+-
+Input sentence: Jump.
+Decoded sentence: Saute.
+
+-
+Input sentence: Stop!
+Decoded sentence: Ça suffit !
+
+-
+Input sentence: Stop!
+Decoded sentence: Ça suffit !
+
+-
+Input sentence: Stop!
+Decoded sentence: Ça suffit !
+
+-
+Input sentence: Wait!
+Decoded sentence: Attendez !
+
+-
+Input sentence: Wait!
+Decoded sentence: Attendez !
+
+-
+Input sentence: Go on.
+Decoded sentence: Poursuis !
+
+-
+Input sentence: Go on.
+Decoded sentence: Poursuis !
+
+-
+Input sentence: Go on.
+Decoded sentence: Poursuis !
+
+-
+Input sentence: I see.
+Decoded sentence: Je vois estair.
+
+-
+Input sentence: I try.
+Decoded sentence: J'essaye.
+
+-
+Input sentence: I won!
+Decoded sentence: Je l'ai emporté !
+
+-
+Input sentence: I won!
+Decoded sentence: Je l'ai emporté !
+
+-
+Input sentence: Oh no!
+Decoded sentence: Oh non !
+
+-
+Input sentence: Attack!
+Decoded sentence: Attaque !
+
+-
+Input sentence: Attack!
+Decoded sentence: Attaque !
+
+-
+Input sentence: Cheers!
+Decoded sentence: Merci !
+
+-
+Input sentence: Cheers!
+Decoded sentence: Merci !
+
+-
+Input sentence: Cheers!
+Decoded sentence: Merci !
+
+-
+Input sentence: Cheers!
+Decoded sentence: Merci !
+
+-
+Input sentence: Get up.
+Decoded sentence: Lève-toi.
+
+-
+Input sentence: Go now.
+Decoded sentence: Vas-y maintenant.
+
+-
+Input sentence: Go now.
+Decoded sentence: Vas-y maintenant.
+
+-
+Input sentence: Go now.
+Decoded sentence: Vas-y maintenant.
+
+-
+Input sentence: Got it!
+Decoded sentence: Compris !
+
+-
+Input sentence: Got it!
+Decoded sentence: Compris !
+
+-
+Input sentence: Got it?
+Decoded sentence: T'as capté ?
+
+-
+Input sentence: Got it?
+Decoded sentence: T'as capté ?
+
+-
+Input sentence: Got it?
+Decoded sentence: T'as capté ?
+
+-
+Input sentence: Hop in.
+Decoded sentence: Montez.
+
+-
+Input sentence: Hop in.
+Decoded sentence: Montez.
+
+-
+Input sentence: Hug me.
+Decoded sentence: Serre-moi dans tes bras !
+
+-
+Input sentence: Hug me.
+Decoded sentence: Serre-moi dans tes bras !
+
+-
+Input sentence: I fell.
+Decoded sentence: Je suis tombée.
+
+-
+Input sentence: I fell.
+Decoded sentence: Je suis tombée.
+
+-
+Input sentence: I know.
+Decoded sentence: Je tinur rue.
+
+-
+Input sentence: I left.
+Decoded sentence: Je suis partie.
+
+-
+Input sentence: I left.
+Decoded sentence: Je suis partie.
+
+-
+Input sentence: I lost.
+Decoded sentence: J'ai perdu.
+
+-
+Input sentence: I'm 19.
+Decoded sentence: Je suis affaible.
+
+-
+Input sentence: I'm OK.
+Decoded sentence: Je vais bien.
+
+-
+Input sentence: I'm OK.
+Decoded sentence: Je vais bien.
+
+-
+Input sentence: Listen.
+Decoded sentence: Écoutez !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est pas possible !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est pas possible !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est pas possible !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est pas possible !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est pas possible !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est pas possible !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est pas possible !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est pas possible !
+
+-
+Input sentence: No way!
+Decoded sentence: C'est pas possible !
+
+-
+Input sentence: Really?
+Decoded sentence: Vraiment ?
+
+-
+Input sentence: Really?
+Decoded sentence: Vraiment ?
+
+-
+Input sentence: Really?
+Decoded sentence: Vraiment ?
+
+-
+Input sentence: Thanks.
+Decoded sentence: Merci !
+
+-
+Input sentence: We try.
+Decoded sentence: On essaye.
+
+-
+Input sentence: We won.
+Decoded sentence: Nous l'emportâmes.
+
+-
+Input sentence: We won.
+Decoded sentence: Nous l'emportâmes.
+
+-
+Input sentence: We won.
+Decoded sentence: Nous l'emportâmes.
+
+-
+Input sentence: We won.
+Decoded sentence: Nous l'emportâmes.
+
+-
+Input sentence: Ask Tom.
+Decoded sentence: Demande à Tom.
+
+-
+Input sentence: Awesome!
+Decoded sentence: Fantastique !
+
+-
+Input sentence: Be calm.
+Decoded sentence: Sois calme !
+
+-
+Input sentence: Be calm.
+Decoded sentence: Sois calme !
+
+-
+Input sentence: Be calm.
+Decoded sentence: Sois calme !
+
+-
+Input sentence: Be cool.
+Decoded sentence: Sois dalme !
+
+-
+Input sentence: Be fair.
+Decoded sentence: Soyez équitable !
+
+-
+Input sentence: Be fair.
+Decoded sentence: Soyez équitable !
+
+-
+Input sentence: Be fair.
+Decoded sentence: Soyez équitable !
+
+-
+Input sentence: Be fair.
+Decoded sentence: Soyez équitable !
+
+-
+Input sentence: Be fair.
+Decoded sentence: Soyez équitable !
+
+-
+Input sentence: Be fair.
+Decoded sentence: Soyez équitable !
+
+-
+Input sentence: Be kind.
+Decoded sentence: Sois gentil.
+
+-
+Input sentence: Be nice.
+Decoded sentence: Soyez gentilles !
+
+-
+Input sentence: Be nice.
+Decoded sentence: Soyez gentilles !
+
+-
+Input sentence: Be nice.
+Decoded sentence: Soyez gentilles !
+
+-
+Input sentence: Be nice.
+Decoded sentence: Soyez gentilles !
+
+-
+Input sentence: Be nice.
+Decoded sentence: Soyez gentilles !
+
+-
+Input sentence: Be nice.
+Decoded sentence: Soyez gentilles !
+
+-
+Input sentence: Beat it.
+Decoded sentence: Dégage, la goître !
+
+-
+Input sentence: Call me.
+Decoded sentence: Appellez-moi !
+
+-
+Input sentence: Call me.
+Decoded sentence: Appellez-moi !
+
+-
+Input sentence: Call us.
+Decoded sentence: Appelle-nous !
+
+-
+Input sentence: Call us.
+Decoded sentence: Appelle-nous !
+
+-
+Input sentence: Come in.
+Decoded sentence: Entrez !
+
+-
+Input sentence: Come in.
+Decoded sentence: Entrez !
+
+-
+Input sentence: Come in.
+Decoded sentence: Entrez !
+
+-
+Input sentence: Come in.
+Decoded sentence: Entrez !
+
+-
+Input sentence: Come on!
+Decoded sentence: Allez !
+
+-
+Input sentence: Come on.
+Decoded sentence: Venez !
+
+-
+Input sentence: Come on.
+Decoded sentence: Venez !
+
+-
+Input sentence: Come on.
+Decoded sentence: Venez !
+
+-
+Input sentence: Drop it!
+Decoded sentence: Laisse tomber !

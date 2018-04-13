@@ -44,7 +44,7 @@ from __future__ import print_function
 
 from keras.models import Model
 from keras.layers import Input, LSTM, Dense
-from keras.callbacks import TensorBoard
+# from keras.callbacks import TensorBoard
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2' # disable Tensorflow warnings
 
@@ -55,7 +55,7 @@ epochs = 50  # Number of epochs to train for.
 latent_dim = 256  # Latent dimensionality of the encoding space.
 num_samples = 10000  # Number of samples to train on.
 # Path to the data txt file on disk.
-data_path = 'ind.txt'
+data_path = 'ara.txt'
 
 # Vectorize the data.
 input_texts = []
@@ -65,7 +65,7 @@ target_characters = set()
 with open(data_path, 'r', encoding='utf-8') as f:
     lines = f.read().split('\n')
 for line in lines[: min(num_samples, len(lines) - 1)]:
-    input_text, target_text = line.split('\t')
+    target_text, input_text = line.split('\t')
     # We use "tab" as the "start sequence" character
     # for the targets, and "\n" as "end sequence" character.
     target_text = '\t' + target_text + '\n'
@@ -140,7 +140,7 @@ decoder_outputs = decoder_dense(decoder_outputs)
 model = Model([encoder_inputs, decoder_inputs], decoder_outputs)
 
 # Create tensorboard log
-tensorboard = TensorBoard(log_dir='./logs', histogram_freq=2, batch_size=batch_size, write_graph=True, write_grads=True, write_images=True)
+# tensorboard = TensorBoard(log_dir='./logs', histogram_freq=2, batch_size=batch_size, write_graph=True, write_grads=True, write_images=True)
 
 # Run training
 model.compile(optimizer='rmsprop', loss='categorical_crossentropy')
@@ -148,7 +148,7 @@ model.fit([encoder_input_data, decoder_input_data], decoder_target_data,
           batch_size=batch_size,
           epochs=epochs,
           verbose=1,
-          validation_split=0.2, callbacks = [tensorboard])
+          validation_split=0.2)
 # Save model
 model.save('name_of_language.h5')
 

@@ -1,0 +1,508 @@
+Using TensorFlow backend.
+Number of samples: 10000
+Number of unique input tokens: 104
+Number of unique output tokens: 76
+Max sequence length for inputs: 65
+Max sequence length for outputs: 50
+Train on 8000 samples, validate on 2000 samples
+Epoch 1/50
+8000/8000 [==============================] - 68s 8ms/step - loss: 1.4037 - val_loss: 2.1761
+Epoch 2/50
+8000/8000 [==============================] - 65s 8ms/step - loss: 1.1369 - val_loss: 1.8929
+Epoch 3/50
+8000/8000 [==============================] - 65s 8ms/step - loss: 1.0117 - val_loss: 1.7570
+Epoch 4/50
+8000/8000 [==============================] - 65s 8ms/step - loss: 0.9460 - val_loss: 1.7150
+Epoch 5/50
+8000/8000 [==============================] - 71s 9ms/step - loss: 0.8952 - val_loss: 1.6339
+Epoch 6/50
+8000/8000 [==============================] - 68s 9ms/step - loss: 0.8557 - val_loss: 1.5839
+Epoch 7/50
+8000/8000 [==============================] - 71s 9ms/step - loss: 0.8167 - val_loss: 1.5519
+Epoch 8/50
+8000/8000 [==============================] - 90s 11ms/step - loss: 0.7832 - val_loss: 1.5348
+Epoch 9/50
+8000/8000 [==============================] - 105s 13ms/step - loss: 0.7553 - val_loss: 1.5012
+Epoch 10/50
+8000/8000 [==============================] - 108s 13ms/step - loss: 0.7389 - val_loss: 1.4158
+Epoch 11/50
+8000/8000 [==============================] - 107s 13ms/step - loss: 0.7155 - val_loss: 1.4199
+Epoch 12/50
+8000/8000 [==============================] - 106s 13ms/step - loss: 0.6877 - val_loss: 1.3968
+Epoch 13/50
+8000/8000 [==============================] - 108s 13ms/step - loss: 0.6674 - val_loss: 1.4001
+Epoch 14/50
+8000/8000 [==============================] - 106s 13ms/step - loss: 0.6484 - val_loss: 1.3572
+Epoch 15/50
+8000/8000 [==============================] - 105s 13ms/step - loss: 0.6306 - val_loss: 1.4067
+Epoch 16/50
+8000/8000 [==============================] - 105s 13ms/step - loss: 0.6136 - val_loss: 1.3760
+Epoch 17/50
+8000/8000 [==============================] - 105s 13ms/step - loss: 0.5975 - val_loss: 1.3537
+Epoch 18/50
+8000/8000 [==============================] - 105s 13ms/step - loss: 0.5859 - val_loss: 1.3837
+Epoch 19/50
+8000/8000 [==============================] - 105s 13ms/step - loss: 0.5682 - val_loss: 1.3879
+Epoch 20/50
+8000/8000 [==============================] - 106s 13ms/step - loss: 0.5533 - val_loss: 1.2996
+Epoch 21/50
+8000/8000 [==============================] - 106s 13ms/step - loss: 0.5399 - val_loss: 1.3109
+Epoch 22/50
+8000/8000 [==============================] - 106s 13ms/step - loss: 0.5267 - val_loss: 1.3652
+Epoch 23/50
+8000/8000 [==============================] - 106s 13ms/step - loss: 0.5136 - val_loss: 1.3834
+Epoch 24/50
+8000/8000 [==============================] - 106s 13ms/step - loss: 0.5016 - val_loss: 1.3268
+Epoch 25/50
+8000/8000 [==============================] - 106s 13ms/step - loss: 0.4893 - val_loss: 1.3854
+Epoch 26/50
+8000/8000 [==============================] - 106s 13ms/step - loss: 0.4775 - val_loss: 1.4079
+Epoch 27/50
+8000/8000 [==============================] - 105s 13ms/step - loss: 0.4662 - val_loss: 1.3197
+Epoch 28/50
+8000/8000 [==============================] - 106s 13ms/step - loss: 0.4550 - val_loss: 1.4098
+Epoch 29/50
+8000/8000 [==============================] - 106s 13ms/step - loss: 0.4440 - val_loss: 1.4043
+Epoch 30/50
+8000/8000 [==============================] - 105s 13ms/step - loss: 0.4329 - val_loss: 1.4342
+Epoch 31/50
+8000/8000 [==============================] - 107s 13ms/step - loss: 0.4225 - val_loss: 1.4782
+Epoch 32/50
+8000/8000 [==============================] - 106s 13ms/step - loss: 0.4122 - val_loss: 1.4815
+Epoch 33/50
+8000/8000 [==============================] - 105s 13ms/step - loss: 0.4026 - val_loss: 1.4153
+Epoch 34/50
+8000/8000 [==============================] - 108s 13ms/step - loss: 0.3928 - val_loss: 1.5051
+Epoch 35/50
+8000/8000 [==============================] - 176s 22ms/step - loss: 0.3844 - val_loss: 1.4901
+Epoch 36/50
+8000/8000 [==============================] - 172s 21ms/step - loss: 0.3748 - val_loss: 1.5288
+Epoch 37/50
+8000/8000 [==============================] - 197s 25ms/step - loss: 0.3664 - val_loss: 1.5180
+Epoch 38/50
+8000/8000 [==============================] - 187s 23ms/step - loss: 0.3581 - val_loss: 1.5814
+Epoch 39/50
+8000/8000 [==============================] - 190s 24ms/step - loss: 0.3504 - val_loss: 1.6241
+Epoch 40/50
+8000/8000 [==============================] - 189s 24ms/step - loss: 0.3424 - val_loss: 1.5989
+Epoch 41/50
+8000/8000 [==============================] - 180s 22ms/step - loss: 0.3348 - val_loss: 1.6747
+Epoch 42/50
+8000/8000 [==============================] - 181s 23ms/step - loss: 0.3273 - val_loss: 1.6373
+Epoch 43/50
+8000/8000 [==============================] - 185s 23ms/step - loss: 0.3211 - val_loss: 1.6152
+Epoch 44/50
+8000/8000 [==============================] - 178s 22ms/step - loss: 0.3139 - val_loss: 1.6460
+Epoch 45/50
+8000/8000 [==============================] - 190s 24ms/step - loss: 0.3075 - val_loss: 1.6478
+Epoch 46/50
+8000/8000 [==============================] - 187s 23ms/step - loss: 0.3013 - val_loss: 1.7124
+Epoch 47/50
+8000/8000 [==============================] - 180s 22ms/step - loss: 0.2948 - val_loss: 1.7417
+Epoch 48/50
+8000/8000 [==============================] - 188s 24ms/step - loss: 0.2892 - val_loss: 1.7415
+Epoch 49/50
+8000/8000 [==============================] - 181s 23ms/step - loss: 0.2830 - val_loss: 1.7445
+Epoch 50/50
+8000/8000 [==============================] - 183s 23ms/step - loss: 0.2780 - val_loss: 1.8113
+/Users/tbot/anaconda3/lib/python3.6/site-packages/keras/engine/topology.py:2368: UserWarning: Layer lstm_2 was passed non-serializable keyword arguments: {'initial_state': [<tf.Tensor 'lstm_1/while/Exit_2:0' shape=(?, 256) dtype=float32>, <tf.Tensor 'lstm_1/while/Exit_3:0' shape=(?, 256) dtype=float32>]}. They will not be included in the serialized model (and thus will be missing at deserialization time).
+  str(node.arguments) + '. They will not be included '
+-
+Input sentence: مرحبًا.
+Decoded sentence: We aren't going to study.
+
+-
+Input sentence: اركض!
+Decoded sentence: Look at me.
+
+-
+Input sentence: النجدة!
+Decoded sentence: The station is new.
+
+-
+Input sentence: اقفز!
+Decoded sentence: Look at me.
+
+-
+Input sentence: قف!
+Decoded sentence: The shop is stiple.
+
+-
+Input sentence: داوم.
+Decoded sentence: Come alone.
+
+-
+Input sentence: استمر.
+Decoded sentence: The boy is hist.
+
+-
+Input sentence: مرحباً.
+Decoded sentence: We aren't going to study.
+
+-
+Input sentence: تعجّل!
+Decoded sentence: Call me again.
+
+-
+Input sentence: استعجل!
+Decoded sentence: The boy is hist.
+
+-
+Input sentence: انا اري
+Decoded sentence: I work every day.
+
+-
+Input sentence: أنا فُزت!
+Decoded sentence: I'm sure.
+
+-
+Input sentence: ابتسم.
+Decoded sentence: He took his sister ole.
+
+-
+Input sentence: في صحتك.
+Decoded sentence: He looks suspicious.
+
+-
+Input sentence: هل فهمت؟
+Decoded sentence: Do you have a pen?
+
+-
+Input sentence: ركض.
+Decoded sentence: The boy is hist.
+
+-
+Input sentence: أعرف.
+Decoded sentence: I know his name.
+
+-
+Input sentence: أعلم ذلك.
+Decoded sentence: I want to go.
+
+-
+Input sentence: أنا أعلم
+Decoded sentence: I'm sure.
+
+-
+Input sentence: أنا في 19
+Decoded sentence: I'm sure.
+
+-
+Input sentence: أنا بخير.
+Decoded sentence: I'm a student.
+
+-
+Input sentence: استمع
+Decoded sentence: The boy is hist.
+
+-
+Input sentence: غير معقول!
+Decoded sentence: That's a hotel.
+
+-
+Input sentence: حقاً؟
+Decoded sentence: The station is new.
+
+-
+Input sentence: لماذا أنا؟
+Decoded sentence: Why do you ask?
+
+-
+Input sentence: رائع!
+Decoded sentence: The shop is stiple.
+
+-
+Input sentence: هاتفني.
+Decoded sentence: Come on. Let.
+
+-
+Input sentence: اتصل بي.
+Decoded sentence: Come on. Let.
+
+-
+Input sentence: تفضل بالدخول.
+Decoded sentence: Call me as soon.
+
+-
+Input sentence: تعال إلى الداخل
+Decoded sentence: Come on. Let's go home.
+
+-
+Input sentence: بالله عليك!
+Decoded sentence: That's my car.
+
+-
+Input sentence: هيا
+Decoded sentence: Come on. Let's go.
+
+-
+Input sentence: هيّا
+Decoded sentence: Can you see the dickitht?
+
+-
+Input sentence: اخرج من هنا!
+Decoded sentence: The boy is hist.
+
+-
+Input sentence: أُخرج!
+Decoded sentence: Look at me.
+
+-
+Input sentence: اخرج!
+Decoded sentence: The boy is hist.
+
+-
+Input sentence: اتركني و شأني.
+Decoded sentence: Let's go somewite.
+
+-
+Input sentence: اذهب بعيداً.
+Decoded sentence: Come on. Let.
+
+-
+Input sentence: ارحل.
+Decoded sentence: Look it.
+
+-
+Input sentence: مع السلامة.
+Decoded sentence: That's not smaking.
+
+-
+Input sentence: لقد أتى.
+Decoded sentence: I have a sellan well.
+
+-
+Input sentence: هو يجري
+Decoded sentence: He is a son.
+
+-
+Input sentence: ساعدني!
+Decoded sentence: We arrived her alone.
+
+-
+Input sentence: النجدة! ساعدني!
+Decoded sentence: The boy is hisiz.
+
+-
+Input sentence: أنا حزين.
+Decoded sentence: I'm sorry.
+
+-
+Input sentence: أنا أيضاً.
+Decoded sentence: I'm sorry.
+
+-
+Input sentence: اخرس!
+Decoded sentence: Look at me.
+
+-
+Input sentence: اصمت!
+Decoded sentence: Call me again.
+
+-
+Input sentence: اسكت!
+Decoded sentence: The boy is hist.
+
+-
+Input sentence: أغلق فمك!
+Decoded sentence: The boy is hist.
+
+-
+Input sentence: أوقفه
+Decoded sentence: She speaks her anowher.
+
+-
+Input sentence: خذه
+Decoded sentence: He cometing a seating the bask.
+
+-
+Input sentence: توم فاز.
+Decoded sentence: Tom is a new brother.
+
+-
+Input sentence: لقد ربح توم.
+Decoded sentence: I have a sellano evening her.
+
+-
+Input sentence: استيقظ!
+Decoded sentence: Come on. Let.
+
+-
+Input sentence: أهلاً و سهلاً!
+Decoded sentence: Is that your some?
+
+-
+Input sentence: مرحباً بك!
+Decoded sentence: Why do you have?
+
+-
+Input sentence: اهلا وسهلا
+Decoded sentence: Can you really do it?
+
+-
+Input sentence: مرحبا!
+Decoded sentence: We still have you.
+
+-
+Input sentence: من فاز؟
+Decoded sentence: Who is he?
+
+-
+Input sentence: من الذي ربح؟
+Decoded sentence: Who is that?
+
+-
+Input sentence: لم لا؟
+Decoded sentence: Why do you ask?
+
+-
+Input sentence: لما لا؟
+Decoded sentence: Why do you ask?
+
+-
+Input sentence: استمتع بوقتك.
+Decoded sentence: I went to the back.
+
+-
+Input sentence: أسرع!
+Decoded sentence: We arming a start charce.
+
+-
+Input sentence: لقد نسيت.
+Decoded sentence: You should have tole.
+
+-
+Input sentence: فهمتُهُ.
+Decoded sentence: Come alone.
+
+-
+Input sentence: فهمتُها.
+Decoded sentence: Come alone.
+
+-
+Input sentence: فَهمتُ ذلك.
+Decoded sentence: Do you have a pen?
+
+-
+Input sentence: أستخدمه.
+Decoded sentence: I was happy.
+
+-
+Input sentence: سأدفع أنا.
+Decoded sentence: I'll be here alone.
+
+-
+Input sentence: أنا مشغول.
+Decoded sentence: I'm sure.
+
+-
+Input sentence: إنني مشغول.
+Decoded sentence: I'm a student.
+
+-
+Input sentence: أشعر بالبرد.
+Decoded sentence: I think you're mistaken.
+
+-
+Input sentence: أنا حُرّ.
+Decoded sentence: I'm sorry.
+
+-
+Input sentence: أنا هنا
+Decoded sentence: I'm sorry.
+
+-
+Input sentence: لقد عدت إلى البيت
+Decoded sentence: I have a senigh so father.
+
+-
+Input sentence: أنا فقير.
+Decoded sentence: I'm sorry.
+
+-
+Input sentence: أنا ثري.
+Decoded sentence: I'm a student.
+
+-
+Input sentence: هذا مؤلم
+Decoded sentence: This is a book.
+
+-
+Input sentence: الجو حار
+Decoded sentence: The shop is stiple.
+
+-
+Input sentence: إنه جديد
+Decoded sentence: He is a senilg.
+
+-
+Input sentence: هيا بنا!
+Decoded sentence: Here is your book.
+
+-
+Input sentence: هيا لنذهب!
+Decoded sentence: Here is your book.
+
+-
+Input sentence: لنذهب.
+Decoded sentence: Let's go!
+
+-
+Input sentence: هيا بنا.
+Decoded sentence: Here is your book.
+
+-
+Input sentence: هيا بنا نذهب.
+Decoded sentence: Here is your book.
+
+-
+Input sentence: اِنتبه!
+Decoded sentence: Look it.
+
+-
+Input sentence: إحذر!
+Decoded sentence: Let's go.
+
+-
+Input sentence: انتبه
+Decoded sentence: The boy is hist.
+
+-
+Input sentence: تكلم!
+Decoded sentence: The shot is alwned me.
+
+-
+Input sentence: قف!
+Decoded sentence: The shop is stiple.
+
+-
+Input sentence: رائع!
+Decoded sentence: The shop is stiple.
+
+-
+Input sentence: ممتاز!
+Decoded sentence: We're happy to see you.
+
+-
+Input sentence: توم مات.
+Decoded sentence: Tom is a new brother.
+
+-
+Input sentence: توفي توم.
+Decoded sentence: Tom is a new brother.
+
+-
+Input sentence: لقد غادر توم.
+Decoded sentence: It is a senfist.
+
+-
+Input sentence: لقد كذِبَ توم.
+Decoded sentence: You should have tole.
+
+-
+Input sentence: لقد خَسِرَ توم.
+Decoded sentence: He looks suspicious.
+
+-
+Input sentence: توم استقال.
+Decoded sentence: Tom is a good book.
